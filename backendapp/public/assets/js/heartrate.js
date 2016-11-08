@@ -88,8 +88,8 @@ function setHeartRateData(evt){
 }
 //getHeartRate();
 var intveral;
-
-var socket = io('http://192.168.0.58:3000');
+//http://192.168.0.58:3000
+var socket = io('http://ec2-54-70-157-24.us-west-2.compute.amazonaws.com:3000');
 
 socket.on('connect', function() {
 	socket.on('heartrate', function(data) {
