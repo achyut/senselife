@@ -5,7 +5,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>iLife | Login</title>
+	<title>SenseLife | Login</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -40,9 +40,9 @@
                     <img src="assets/img/bg3.jpg" data-id="login-cover-image" alt="" />
                 </div>
                 <div class="news-caption">
-                    <h4 class="caption-title"><i class="fa fa-stethoscope text-success"></i> Announcing iLife</h4>
+                    <h4 class="caption-title"><i class="fa fa-stethoscope text-success"></i> Announcing SenseLife</h4>
                     <p>
-                        Download the iLife App to use your wearables without being worried about changing new devices.
+                        Download the SenseLife App to use your wearables without being worried about changing new devices.
                     </p>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <!-- begin login-header -->
                 <div class="login-header">
                     <div class="brand">
-                        <span class="logo"></span> iLife
+                        <span class="logo"></span> SenseLife
                         <small>Many devices one platform</small>
                     </div>
                     <div class="icon">
@@ -94,7 +94,7 @@
                         </div>
                         <hr />
                         <p class="text-center text-inverse">
-                            &copy; iLife All Right Reserved 2016
+                            &copy; SenseLife All Right Reserved 2016
                         </p>
                     </form>
                 </div>

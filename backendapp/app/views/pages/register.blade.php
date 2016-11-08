@@ -5,7 +5,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>iLife | Register</title>
+	<title>SenseLife | Register</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -40,9 +40,9 @@
                     <img src="assets/img/bg4.jpg" alt="" style="width:100%;height:100%" />
                 </div>
                 <div class="news-caption">
-                    <h4 class="caption-title"><i class="fa fa-stethoscope text-success"></i> Announcing iLife</h4>
+                    <h4 class="caption-title"><i class="fa fa-stethoscope text-success"></i> Announcing SenseLife</h4>
                     <p>
-                        Download the iLife App to use your wearables without being worried about changing new devices.
+                        Download the SenseLife App to use your wearables without being worried about changing new devices.
                     </p>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <!-- begin register-header -->
                 <h1 class="register-header">
                     Sign Up
-                    <small>Create your iLife Account today and Integrate all of your wearable devices in one place. It’s free and always will be.</small>
+                    <small>Create your SenseLife Account today and Integrate all of your wearable devices in one place. It’s free and always will be.</small>
                 </h1>
                 <!-- end register-header -->
                 <!-- begin register-content -->
@@ -101,7 +101,7 @@
                         </div>
                         <hr />
                         <p class="text-center text-inverse">
-                            &copy; iLife All Right Reserved 2016
+                            &copy; SenseLife All Right Reserved 2016
                         </p>
                     </form>
                 </div>
