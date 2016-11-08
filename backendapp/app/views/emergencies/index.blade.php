@@ -57,6 +57,7 @@
 							<tr>
 								<th>Name</th>
 								<th>Phone</th>
+								<th>Email</th>
 								<th>Address</th>
 								<th>Relationship</th>
 								<th>&nbsp;</th>
@@ -68,6 +69,7 @@
 								<tr>
 									<td>{{{ $emergency->name }}}</td>
 									<td>{{{ $emergency->phone }}}</td>
+									<td>{{{ $emergency->email }}}</td>
 									<td>{{{ $emergency->address }}}</td>
 									<td>{{{ $emergency->relationship }}}</td>
 				                    <td>
