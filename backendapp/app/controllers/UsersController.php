@@ -162,7 +162,7 @@ class UsersController extends BaseController {
 		{
 			$user = $this->user->find($id);
 			$user->update($input);
-			return $this->sendSuccessResponse($user,Lang::get('messages.updateprofile'),"devices");
+			return $this->sendSuccessResponse($user,Lang::get('messages.updateprofile'),"dashboard");
 		}
 		
 		return $this->sendErrorResponse($input,$validation->messages(),Lang::get('messages.invaliddata'),'updateprofile');
