@@ -138,8 +138,9 @@ class DevicesController extends BaseController {
 	public function addNewDeviceRest($id)
 	{
 		$input = Input::all();
-		$validation = Validator::make($input, Device::$rules);
 		$input["created_by"] = $id;
+		Log::info($input);
+		$validation = Validator::make($input, Device::$rules);
 		if ($validation->passes())
 		{
 			$this->device->create($input);
