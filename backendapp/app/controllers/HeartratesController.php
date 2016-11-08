@@ -142,6 +142,26 @@ class HeartratesController extends BaseController {
 		return $this->sendSuccessResponse($input,Lang::get('messages.success'),"dashboard");
 	}
 
+	public function emailGraphToEmailAddress()
+	{
+		$inputgot = Input::all();
+
+		$id = $inputgot["userid"];
+		$email = $inputgot["email"];
+		$url = App::make('url')->to('/');
+		$url .= "/api/graph/".$id;
+		$input['url'] = $url;
+		$input['user'] = $inputgot["name"];
+
+		Mail::send('emails.invitegraph', $input, function($message)  use ($email){
+		    $message->to($email, 'SenseLife')->subject('Invitation for Health Graph');
+		});
+		
+		return $this->sendSuccessResponse($input,Lang::get('messages.success'),"dashboard");
+	}
+
+	
+
 	public function viewGraph($id)
 	{
 		return View::make('pages.graph');

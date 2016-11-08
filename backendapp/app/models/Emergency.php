@@ -9,4 +9,9 @@ class Emergency extends Eloquent {
 		'address' => 'required',
 		'relationship' => 'required'
 	);
+
+	public function getEmergenciesOfUser($userid)
+	{
+		return $this->where('created_by','=',$userid)->get();
+	}
 }

@@ -128,4 +128,12 @@ class EmergenciesController extends BaseController {
 		return Redirect::route('emergencies.index');
 	}
 
+	public function getallemergencyRest($id)
+	{
+		$emergencys = $this->emergency->getEmergenciesOfUser($id);
+		return $this->sendSuccessResponse($emergencys,Lang::get('messages.success'),"#");
+	}
+
+	
+
 }

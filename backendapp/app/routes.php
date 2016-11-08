@@ -67,5 +67,9 @@ Route::group(['prefix' => 'api'], function () {
     Route::get('deleteDevice/{id}','DevicesController@deleteDeviceRest');
 
     Route::get('emailgraph/{id}','HeartratesController@emailGraph');
+    Route::post('emailgraph','HeartratesController@emailGraphToEmailAddress');
     Route::get('graph/{id}','HeartratesController@viewGraph');
+
+    Route::get('getallemergency/{id}','EmergenciesController@getallemergencyRest');
+    
 });
