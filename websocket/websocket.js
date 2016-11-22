@@ -11,9 +11,31 @@ io.sockets.on('connection', function (socket) {
     socket.on('heartrate',function(data){
       console.log(data);
       socket.broadcast.emit('heartrate',data);
-      //socket.emit('heartratereceiver',data);  
     });
 
+
+    socket.on('distance',function(data){
+      console.log("distance: "+data);
+      socket.broadcast.emit('distance',data);
+    });
+
+
+    socket.on('calorie',function(data){
+      console.log("calorie: "+data);
+      socket.broadcast.emit('calorie',data);
+    });
+
+
+
+    socket.on('steps',function(data){
+      console.log("steps: "+data);
+      socket.broadcast.emit('steps',data);
+    });
+
+    socket.on('temperature',function(data){
+      console.log("temperature: "+data);
+      socket.broadcast.emit('temperature',data);
+    });
 
     socket.emit('text', 'wow. such event. very real time.');
 });
