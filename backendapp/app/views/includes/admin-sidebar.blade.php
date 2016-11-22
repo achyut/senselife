@@ -19,6 +19,7 @@
 				<ul class="nav">
 					<li class="nav-header">Navigation</li>
 					<li {{{ (Request::is('dashboard') ? 'class=active' : '') }}}><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+					<li {{{ (Request::is('comparedata') ? 'class=active' : '') }}}><a href="/comparedata"><i class="fa fa-dashboard"></i> <span>Compare Data</span></a></li>
                     <li {{{ (Request::is('devices') ? 'class=active' : '') }}}><a href="/devices"><i class="fa fa-laptop"></i> <span>Devices</span></a></li>
 					<li {{{ (Request::is('emergencies') ? 'class=active' : '') }}}><a href="/emergencies"><i class="fa fa-life-saver"></i> <span>Emergency Contacts</span></a></li>
 					<li {{{ (Request::is('updateprofilelogged') ? 'class=active' : '') }}}><a href="/updateprofilelogged"><i class="fa fa-user"></i> <span>Your Profile</span></a></li>

@@ -134,6 +134,10 @@ class UsersController extends BaseController {
 		return View::make('pages.dashboard');
 	}
 
+	public function comparedata()
+	{
+		return View::make('pages.comparedata');	
+	}
 
 	public function updateprofile()
 	{

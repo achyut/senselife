@@ -1,7 +1,11 @@
 function e(val,timestamp) {
 	data = t(val,timestamp);
 	//alert(data);
-	o.setData([data]);
+	o.setData([data,{
+				data: d6_1,
+				color:"red",
+				lines: { show: true,fill:false}
+			}]);
 	o.draw();
 	//setTimeout(e, i)
 }
@@ -12,15 +16,6 @@ function t(value,timestamp) {
 	}
 	
 	while(n.length<r) {
-		/*var e=n.length>0?n[n.length-1]: 50;
-		var t=e+Math.random()*10-5;
-		if(t<0) {
-			t=0
-		}
-		if(t>100) {
-			t=100
-		}
-		*/
 		n.push(0)
 	}
 	n.push(value);
@@ -72,8 +67,15 @@ if($("#live-updated-chart").length!==0) {
 		}
 	}
 	;
-	var o =$.plot($("#live-updated-chart"), [t(0)], s);
-	e(0)
+
+	var d6_1 = [];
+		for (var i = 0; i < 150; i += 1) {
+			d6_1.push([i, 120]);
+		}
+
+	var o =$.plot($("#live-updated-chart"), [t(0)
+			], s);
+	e(0);
 }
 
 function setHeartRateData(evt){

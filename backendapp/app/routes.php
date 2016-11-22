@@ -19,6 +19,7 @@ Route::get('/', function()
 Route::group(array('before' => 'auth|manager'), function() {
 	
 	Route::get('dashboard',array('as' => 'dashboard', 'uses' => 'UsersController@dashboard'));
+    Route::get('comparedata',array('as' => 'comparedata', 'uses' => 'UsersController@comparedata'));
 });
 
 Route::resource('users', 'UsersController');
