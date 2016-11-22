@@ -27,7 +27,7 @@
 						<div class="stats-icon"><i class="fa fa-fire"></i></div>
 						<div class="stats-info">
 							<h4>TOTAL CALORIES</h4>
-							<p>321</p>	
+							<p id="totalCalorieText">0</p>	
 						</div>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 						<div class="stats-icon"><i class="fa fa-flag-checkered"></i></div>
 						<div class="stats-info">
 							<h4>TOTAL STEPS</h4>
-							<p>2011</p>	
+							<p id="totalStepsText">0</p>	
 						</div>
 					</div>
 				</div>
@@ -49,7 +49,7 @@
 						<div class="stats-icon"><i class="fa fa-road"></i></div>
 						<div class="stats-info">
 							<h4>DISTANCE TRAVELLED</h4>
-							<p>1.2 MILES</p>	
+							<p id="totalDistanceText">0 MILES</p>	
 						</div>
 					</div>
 				</div>
@@ -59,8 +59,8 @@
 					<div class="widget widget-stats bg-red">
 						<div class="stats-icon"><i class="fa fa-clock-o"></i></div>
 						<div class="stats-info">
-							<h4>WAKE UP TIME</h4>
-							<p>00:12:23</p>	
+							<h4>Body Temperature</h4>
+							<p id="bodyTemperatureValue">0 C</p>	
 						</div>
 					</div>
 				</div>
@@ -80,19 +80,19 @@
 					</ul>
 					<div class="tab-content" data-sortable-id="index-3">
 						<div class="tab-pane fade active in" id="heartrate">
-							<div id="live-updated-chart" class="height-sm"></div>
+							<div id="heartRateChart" style="width:100%;height:320px;"></div>
 							<button id="currentrate" class="btn btn-lg btn-success"></button>
 							
 						</div>
 						<div class="tab-pane fade" id="calories">
-							 <div id="calorieschart" class="height-sm" style="width:98%;padding: 20px 15px 15px 15px;margin: 15px auto 30px;"></div>
+							<div id="calorieChart" style="width:100%;height:320px;"></div>
 						</div>
 						<div class="tab-pane fade" id="steps">
-							<div id="stepCharts" class="height-sm" style="width:98%;padding: 20px 15px 15px 15px;margin: 15px auto 30px;"></div>
+							<div id="stepCharts" style="width:100%;height:320px;"></div>
 						</div>
+
 						<div class="tab-pane fade" id="distance">
-							
-							<div id="bodyTemperature" class="height-sm" style="width:98%;padding: 20px 15px 15px 15px;margin: 15px auto 30px;"></div>
+							<div id="tempChart" style="width:100%;height:320px;"></div>
 						</div>
 					</div>
 					
@@ -113,7 +113,7 @@
 	<script src="{{{ asset('assets/plugins/DataTables/media/js/jquery.dataTables.js') }}}"></script>
 	<script src="{{{ asset('assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js') }}}"></script>
 	<script src="{{{ asset('assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js') }}}"></script>
-	<script src="{{{ asset('assets/js/table-manage-default.demo.min.js') }}}"></script>
+	
 	<script src="{{{ asset('assets/plugins/parsley/dist/parsley.js')}}}"></script>
 	<script src="{{{ asset('assets/plugins/flot/jquery.flot.min.js')}}}"></script>
 	<script src="{{{ asset('assets/plugins/flot/jquery.flot.time.min.js')}}}"></script>
@@ -127,76 +127,17 @@
 		
 		$(document).ready(function() {
 			App.init();
-			//Dashboard.init();
-			TableManageDefault.init();
 		});
 			
 	</script>
 
-	<script type="text/javascript">
-
-	$(function() {
-
-		var d6 = [];
-		for (var i = 0; i < 14; i += 0.5 + Math.random()) {
-			d6.push([i, Math.sqrt(2*i + Math.sin(i) + 5)]);
-		}
-
-		var d6_1 = [];
-		for (var i = 0; i <= 14; i++) {
-			d6_1.push([i, 7]);
-		}
-
-		$.plot("#calorieschart", [
-			{
-				data: d6,
-				color:"black",
-				lines: { show: true, steps: true }
-			},
-			{
-				data: d6_1,
-				color:"red",
-				lines: { show: true}
-			}
-		]);
-
-		var d1 = [];
-		for (var i = 0; i < 14; i += 0.5) {
-			d1.push([i, Math.sin(i)]);
-		}
-
-		$.plot("#bodyTemperature", [
-			{
-				data: d1,
-				color:"red",
-				lines: { show: true }
-			}
-		]);
-
-		var d8 = [];
-		for (var i = 0; i < 14; i += 0.5 + Math.random()) {
-			d8.push([i, Math.sqrt(2*i + Math.sin(i) + 5)]);
-		}
-		
-		$.plot("#stepCharts", [
-			{
-				data: d8,
-				lines: { show: true, steps: true }
-			},
-			{
-				data: d6_1,
-				color:"red",
-				lines: { show: true}
-			}
-		]);
-		
-
-	});
-
-	</script>
-
 	<script src="{{{ asset('assets/js/apps.min.js') }}}"></script>
-	<script type="text/javascript" src="http://cdn.socket.io/socket.io-1.0.3.js"></script>
-	<script src="{{{ asset('assets/js/heartrate.js') }}}"></script>
 	
+	<script src="{{{ asset('assets/js/distance.js') }}}"></script>
+	<script src="{{{ asset('assets/js/calorie.js') }}}"></script>
+	<script src="{{{ asset('assets/js/steps.js') }}}"></script>
+	<script src="{{{ asset('assets/js/temperature.js') }}}"></script>
+	<script src="{{{ asset('assets/js/heartrate1.js') }}}"></script>
+	<script type="text/javascript" src="http://cdn.socket.io/socket.io-1.0.3.js"></script>
+	<script src="{{{ asset('assets/js/socket.js') }}}"></script>
 	@endsection

@@ -11,5 +11,4 @@
 	<script src="{{{ asset('assets/plugins/slimscroll/jquery.slimscroll.min.js')}}}"></script>
 	<script src="{{{ asset('assets/plugins/jquery-cookie/jquery.cookie.js')}}}"></script>
 	<script src="{{{ asset('assets/plugins/gritter/js/jquery.gritter.js')}}}"></script>
-	<script src="{{{ asset('assets/js/common.js')}}}"></script>
 	<!-- ================== END BASE JS ================== -->

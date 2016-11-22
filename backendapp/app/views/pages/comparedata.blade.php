@@ -27,7 +27,7 @@
 						<div class="stats-icon"><i class="fa fa-fire"></i></div>
 						<div class="stats-info">
 							<h4>TOTAL CALORIES</h4>
-							<p>321</p>	
+							<p id="totalCalorieText">0</p>	
 						</div>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 						<div class="stats-icon"><i class="fa fa-flag-checkered"></i></div>
 						<div class="stats-info">
 							<h4>TOTAL STEPS</h4>
-							<p>2011</p>	
+							<p id="totalStepsText">0</p>	
 						</div>
 					</div>
 				</div>
@@ -49,7 +49,7 @@
 						<div class="stats-icon"><i class="fa fa-road"></i></div>
 						<div class="stats-info">
 							<h4>DISTANCE TRAVELLED</h4>
-							<p>1.2 MILES</p>	
+							<p id="totalDistanceText">0 MILES</p>	
 						</div>
 					</div>
 				</div>
@@ -59,8 +59,8 @@
 					<div class="widget widget-stats bg-red">
 						<div class="stats-icon"><i class="fa fa-clock-o"></i></div>
 						<div class="stats-info">
-							<h4>WAKE UP TIME</h4>
-							<p>00:12:23</p>	
+							<h4>Body Temperature</h4>
+							<p id="bodyTemperatureValue">0 C</p>	
 						</div>
 					</div>
 				</div>
@@ -104,44 +104,13 @@
 		$(document).ready(function() {
 			App.init();
 			//Dashboard.init();
-			TableManageDefault.init();
 		});
 			
 	</script>
 
-	<script type="text/javascript">
-
-	$(function() {
-
-		var d6 = [];
-		for (var i = 0; i < 14; i += 0.5 + Math.random()) {
-			d6.push([i, Math.sqrt(2*i + Math.sin(i) + 5)]);
-		}
-
-		var d6_1 = [];
-		for (var i = 0; i <= 14; i++) {
-			d6_1.push([i, 7]);
-		}
-
-		$.plot("#combined-chart", [
-			{
-				data: d6,
-				color:"black",
-				lines: { show: true, steps: true }
-			},
-			{
-				data: d6_1,
-				color:"red",
-				lines: { show: true}
-			}
-		]);
-
-	});
-
-	</script>
-
+	<script src="{{{ asset('assets/js/combined.js') }}}"></script>
 	<script src="{{{ asset('assets/js/apps.min.js') }}}"></script>
 	<script type="text/javascript" src="http://cdn.socket.io/socket.io-1.0.3.js"></script>
-	
+	<script src="{{{ asset('assets/js/socket.js') }}}"></script>
 	
 	@endsection

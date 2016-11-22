@@ -26,7 +26,7 @@ function t(value,timestamp) {
 	return i
 }
 
-if($("#live-updated-chart").length!==0) {
+if($("#heartRateChart").length!==0) {
 	var n=[],
 	r=150;
 	var i=1000;
@@ -73,7 +73,7 @@ if($("#live-updated-chart").length!==0) {
 			d6_1.push([i, 120]);
 		}
 
-	var o =$.plot($("#live-updated-chart"), [t(0)
+	var o =$.plot($("#heartRateChart"), [t(0)
 			], s);
 	e(0);
 }
@@ -91,11 +91,9 @@ function setHeartRateData(evt){
 //getHeartRate();
 var intveral;
 //http://192.168.0.58:3000
-var socket = io('http://ec2-54-70-157-24.us-west-2.compute.amazonaws.com:3000');
 
-socket.on('connect', function() {
-	socket.on('heartrate', function(data) {
-		//console.log(data);
-		setHeartRateData(data);
-	});
-});
+
+
+
+
+
