@@ -32,7 +32,7 @@ io.sockets.on('connection', function (socket) {
       var heartvalue  = {
       	created_by: data["userid"],
       	heartimestamp: data["timestamp"],
-      	value: data["value"],
+      	value: data["heartRate"],
       	created_at:moment().format('YYYY-MM-DD HH:mm:ss'),
       	updated_at:moment().format('YYYY-MM-DD HH:mm:ss')
       };
