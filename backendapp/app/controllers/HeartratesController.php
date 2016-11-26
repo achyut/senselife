@@ -164,6 +164,12 @@ class HeartratesController extends BaseController {
 
 	public function viewGraph($id)
 	{
-		return View::make('pages.graph');
+		return View::make('pages.graph',compact('id'));
 	}
+
+	public function viewGraphAll($id)
+	{
+		return View::make('pages.graphall',compact('id'));
+	}
+
 }

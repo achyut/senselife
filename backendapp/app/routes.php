@@ -70,6 +70,7 @@ Route::group(['prefix' => 'api'], function () {
     Route::get('emailgraph/{id}','HeartratesController@emailGraph');
     Route::post('emailgraph','HeartratesController@emailGraphToEmailAddress');
     Route::get('graph/{id}','HeartratesController@viewGraph');
+    Route::get('graphall/{id}','HeartratesController@viewGraphAll');
 
     Route::get('getallemergency/{id}','EmergenciesController@getallemergencyRest');
     

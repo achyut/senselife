@@ -71,7 +71,7 @@ var combinedOptions = {
         axisLabelPadding: 10
     },
     yaxis: {
-        tickSize: 20,
+        tickSize: 10,
         axisLabel: "Todays Steps",
         axisLabelUseCanvas: true,
         axisLabelFontSizePixels: 12,
@@ -93,7 +93,7 @@ $(document).ready(function () {
         }},
         { label: "temperature", data: temperatureData,color:"red"},
         { label: "steps", data: stepData,color:"green"},
-        { label: "calorie", data: calorieData,color:"yellow"}
+        //{ label: "calorie", data: calorieData,color:"yellow"}
     ]; 
 
     $.plot($("#combined-chart"), combinedDataset, combinedOptions);
