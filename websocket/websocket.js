@@ -31,7 +31,7 @@ io.sockets.on('connection', function (socket) {
       socket.broadcast.emit('heartrate',data);
       var heartvalue  = {
       	created_by: data["userid"],
-      	heartimestamp: data["timestamp"],
+      	timestamp: data["timestamp"],
       	value: data["heartRate"],
       	created_at:moment().format('YYYY-MM-DD HH:mm:ss'),
       	updated_at:moment().format('YYYY-MM-DD HH:mm:ss')

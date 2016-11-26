@@ -16,7 +16,7 @@ class CreateStepsTable extends Migration {
 			$table->increments('id');
 			$table->integer('created_by')->unsigned();
 			$table->foreign('created_by')->references('id')->on('users');
-			$table->timestamp('timestamp');
+			$table->string('timestamp');
 			$table->integer('value');
 			$table->timestamps();
 		});
