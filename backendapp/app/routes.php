@@ -34,6 +34,8 @@ Route::resource('calories', 'CaloriesController');
 
 Route::resource('steps', 'StepsController');
 
+Route::resource('temperatures', 'TemperaturesController');
+
 Route::resource('users', 'UsersController');
 
 Route::get('updateprofilelogged',array('as' => 'updateprofilelogged', 'uses'=>'UsersController@updateprofilelogged'));
@@ -75,3 +77,5 @@ Route::group(['prefix' => 'api'], function () {
     Route::get('getallemergency/{id}','EmergenciesController@getallemergencyRest');
     
 });
+
+Route::resource('distances', 'DistancesController');

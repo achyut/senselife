@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('HeartratesTableSeeder');
 		$this->call('CaloriesTableSeeder');
 		$this->call('StepsTableSeeder');
+		$this->call('TemperaturesTableSeeder');
+		$this->call('DistancesTableSeeder');
 	}
 
 }
