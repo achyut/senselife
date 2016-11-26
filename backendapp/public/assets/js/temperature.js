@@ -1,4 +1,5 @@
 
+var temperatureThresholdValue = 33;
 var temperatureData = [];
 var temperatureDataset;
 var temperatureThreshold = [];
@@ -14,7 +15,7 @@ function getTemperatureData(timestamp,value) {
     }
     while (temperatureData.length < totalPoints) {     
         var temp = [timestamp, value];
- 		var ths = [timestamp,33];
+ 		var ths = [timestamp,temperatureThresholdValue];
         temperatureData.push(temp);
     	temperatureThreshold.push(ths);
     }

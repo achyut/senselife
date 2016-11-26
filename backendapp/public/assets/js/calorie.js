@@ -51,7 +51,7 @@ var calorieOptions = {
         axisLabelPadding: 10
     },
     yaxis: {
-        tickSize: 20,
+        tickSize: 100,
         axisLabel: "Todays Steps",
         axisLabelUseCanvas: true,
         axisLabelFontSizePixels: 12,
