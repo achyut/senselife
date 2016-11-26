@@ -96,7 +96,7 @@ io.sockets.on('connection', function (socket) {
 
 
     socket.on('steps',function(data){
-      console.log(data);
+      //console.log(data);
       socket.broadcast.emit('steps',data);
       var stepValue  = {
         created_by: data["userid"],
