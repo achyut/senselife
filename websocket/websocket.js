@@ -49,26 +49,26 @@ io.sockets.on('connection', function (socket) {
 
 
     socket.on('distance',function(data){
-      console.log("distance: "+data);
+      console.log(data);
       socket.broadcast.emit('distance',data);
     
     });
 
 
     socket.on('calorie',function(data){
-      console.log("calorie: "+data);
+      console.log(data);
       socket.broadcast.emit('calorie',data);
     });
 
 
 
     socket.on('steps',function(data){
-      console.log("steps: "+data);
+      console.log(data);
       socket.broadcast.emit('steps',data);
     });
 
     socket.on('temperature',function(data){
-      console.log("temperature: "+data);
+      console.log(data);
       socket.broadcast.emit('temperature',data);
     });
 
