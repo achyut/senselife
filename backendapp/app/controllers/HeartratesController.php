@@ -164,13 +164,24 @@ class HeartratesController extends BaseController {
 
 	public function viewGraph($id)
 	{
-		return View::make('pages.graph',compact('id'));
+		return View::make('pages.doctor.graph',compact('id'));
 	}
 
 	public function viewGraphAll($id)
 	{
-		return View::make('pages.graphall',compact('id'));
+		return View::make('pages.doctor.graphall',compact('id'));
 	}
+
+	public function historicaldataDoctor($userid)
+	{
+		return View::make('pages.doctor.historicaldata',compact('userid'));	
+	}
+
+	public function historicaldataAllDoctor($userid)
+	{
+		return View::make('pages.doctor.historicaldataall',compact('userid'));	
+	}
+
 
 	public function historyGraphData($id,$startdate,$enddate)
 	{

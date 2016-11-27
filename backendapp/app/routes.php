@@ -74,8 +74,11 @@ Route::group(['prefix' => 'api'], function () {
 
     Route::get('emailgraph/{id}','HeartratesController@emailGraph');
     Route::post('emailgraph','HeartratesController@emailGraphToEmailAddress');
+    
     Route::get('graph/{id}','HeartratesController@viewGraph');
     Route::get('graphall/{id}','HeartratesController@viewGraphAll');
+    Route::get('historicaldatadoctor/{id}','HeartratesController@historicaldataDoctor');
+    Route::get('historicaldataalldoctor/{id}','HeartratesController@historicaldataAllDoctor');
 
     Route::get('historicalgraphdataall/{id}/{startdate}/{enddate}','HeartratesController@historyGraphDataAll');
     Route::get('historicalgraphdata/{id}/{startdate}/{enddate}','HeartratesController@historyGraphData');

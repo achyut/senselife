@@ -64,8 +64,10 @@
 			<div class="row">
 				<!-- begin col-8 -->
 				<div class="col-md-12">
+					<a href="/api/graph/{{$id}}" class="btn btn-sm btn-success">Individual Data</a>
 					<a href="/api/graphall/{{$id}}" class="btn btn-sm btn-success">All Data</a>
-					<a href="/api/graphhistorical/{{$id}}" class="btn btn-sm btn-success">Historical Data</a>
+					<a href="/api/historicaldatadoctor/{{$id}}" class="btn btn-sm btn-success">Individual Historical Data</a>
+					<a href="/api/historicaldataalldoctor/{{$id}}" class="btn btn-sm btn-success">All Historical Data</a>
 				</div>
 			</div>	
 			<br>
