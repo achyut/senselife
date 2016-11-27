@@ -20,6 +20,9 @@ Route::group(array('before' => 'auth|manager'), function() {
 	
 	Route::get('dashboard',array('as' => 'dashboard', 'uses' => 'UsersController@dashboard'));
     Route::get('comparedata',array('as' => 'comparedata', 'uses' => 'UsersController@comparedata'));
+    Route::get('historicaldata',array('as' => 'historicaldata', 'uses' => 'HeartratesController@historicaldata'));
+    Route::get('historicaldataall',array('as' => 'historicaldataall', 'uses' => 'HeartratesController@historicaldataall'));
+    
 });
 
 Route::resource('users', 'UsersController');
@@ -52,7 +55,7 @@ Route::get('register', 'UsersController@register');
 Route::post('login', 'UsersController@doLogin');
 Route::post('register', 'UsersController@doRegister');
 Route::get('logout', 'UsersController@logout');
-
+Route::resource('distances', 'DistancesController');
 
 
 //rest api routes
@@ -74,8 +77,9 @@ Route::group(['prefix' => 'api'], function () {
     Route::get('graph/{id}','HeartratesController@viewGraph');
     Route::get('graphall/{id}','HeartratesController@viewGraphAll');
 
+    Route::get('historicalgraphdataall/{id}/{startdate}/{enddate}','HeartratesController@historyGraphDataAll');
+    Route::get('historicalgraphdata/{id}/{startdate}/{enddate}','HeartratesController@historyGraphData');
+
     Route::get('getallemergency/{id}','EmergenciesController@getallemergencyRest');
     
 });
-
-Route::resource('distances', 'DistancesController');

@@ -172,4 +172,27 @@ class HeartratesController extends BaseController {
 		return View::make('pages.graphall',compact('id'));
 	}
 
+	public function historyGraphData($id,$startdate,$enddate)
+	{
+		$data =  $this->heartrate->getHistoricalData($id,$startdate,$enddate);
+		//dd($data);
+		return $this->sendSuccessResponse($data,Lang::get('messages.success'),"");	
+	}
+
+	public function historyGraphDataAll($id,$startdate,$enddate)
+	{
+		return $this->heartrate->getHistoricalDataAll($id,$startdate,$enddate);
+	}
+
+	public function historicaldata()
+	{
+		$id = Auth::user()->id;
+		return View::make('pages.historicaldata',compact('id'));	
+	}
+
+	public function historicaldataall()
+	{
+		$id = Auth::user()->id;
+		return View::make('pages.historicaldataall',compact('id'));	
+	}
 }
